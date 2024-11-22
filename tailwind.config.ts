@@ -8,9 +8,9 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        geist: ['var(--font-geist)'],
+        allura: ['var(--font-allura)'],
       },
     },
   },
