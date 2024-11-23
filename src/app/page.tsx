@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image';
 
 export default function Home() {
   const [mobileNumber, setMobileNumber] = useState('')
@@ -83,10 +84,12 @@ export default function Home() {
               onMouseLeave={() => setIsHovering1(false)}
             >
               <div className="aspect-[9/16]">
-                <img 
+                <Image 
                   src={isHovering1 ? "/placeholder2hover.jpg" : "/placeholder2.jpg"}
                   alt="Login Example 2"
                   className="w-full h-full object-cover transition-opacity duration-300"
+                  width={500}
+                  height={300}
                 />
               </div>
             </div>
@@ -102,10 +105,12 @@ export default function Home() {
               onMouseLeave={() => setIsHovering2(false)}
             >
               <div className="aspect-[9/16]">
-                <img 
+                <Image 
                   src={isHovering2 ? "/placeholder3hover.jpg" : "/placeholder3.jpg"}
                   alt="Login Example 3"
                   className="w-full h-full object-cover transition-opacity duration-300"
+                  width={500}
+                  height={300}
                 />
               </div>
             </div>

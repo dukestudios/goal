@@ -93,8 +93,6 @@ export default function LanguageDashboard() {
     }
   }
 
-  const content = contentMap[language] || contentMap.english
-
   const handleLogout = () => {
     localStorage.removeItem('selectedLanguage')
     router.push('/')
@@ -392,10 +390,11 @@ export default function LanguageDashboard() {
                     </div>
                   ) : image.generatedUrl ? (
                     <div className="relative w-full h-full">
-                      <img 
+                      <Image 
                         src={image.generatedUrl} 
                         alt="Generated profile" 
-                        className="w-full h-full object-cover"
+                        width={500}
+                        height={300}
                       />
                       {/* Watermark Overlay */}
                       <div className="absolute bottom-4 right-4 text-white text-sm font-light opacity-80 bg-black/30 px-2 py-1 rounded backdrop-blur-sm">
@@ -472,10 +471,11 @@ export default function LanguageDashboard() {
                       </div>
                     ) : image.imageUrl ? (
                       <div className="relative w-full h-full">
-                        <img 
+                        <Image 
                           src={image.imageUrl} 
                           alt={`Art for ${image.name}`} 
-                          className="w-full h-full object-cover"
+                          width={500}
+                          height={300}
                         />
                         {/* Watermark Overlay */}
                         <div className="absolute bottom-4 right-4 text-white text-sm font-light opacity-80 bg-black/30 px-2 py-1 rounded backdrop-blur-sm">
